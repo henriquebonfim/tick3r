@@ -1,6 +1,6 @@
 import { VideoUploader } from '@/features/upload-video/ui/VideoUploader';
 import { Button } from '@/shared/ui/button';
-import { StandardEditor } from '@/widgets/editors/ui/StandardEditor';
+import { ProEditor } from '@/widgets/editors/ui/ProEditor';
 import { Film, Shield } from 'lucide-react';
 import { useCallback, useState } from 'react';
 
@@ -62,7 +62,7 @@ const Index = () => {
           </div>
         ) : (
           /* Editor State */
-          <StandardEditor videoFile={videoFile} videoUrl={videoUrl} />
+          <ProEditor videoFile={videoFile} videoUrl={videoUrl} />
         )}
       </main>
     </div>
