@@ -8,7 +8,9 @@
     <meta name="author" content="Frame Extractor" />
     <meta name="theme-color" content="#3b82f6" />
     <link rel="icon" type="image/png" href="/pwa-192x192.png" />
+    <link rel="icon" type="image/png" href="/pwa-192x192.png" />
     <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https:; worker-src 'self' blob:;">
 
     <meta property="og:title" content="Frame Extractor - Extract Frames from Videos" />
     <meta property="og:description" content="Free online tool to extract frames from any video. 100% client-side processing." />
@@ -23,6 +25,6 @@
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/app/main.tsx"></script>
   </body>
 </html>
