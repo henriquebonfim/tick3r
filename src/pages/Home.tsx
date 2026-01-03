@@ -27,7 +27,7 @@ const Index = () => {
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <div className="flex items-center gap-3 cursor-pointer" onClick={handleBack} title="Choose another video">
             <img src="/pwa-192x192.png" alt="tick3r" className="h-10 w-10" />
-            <span className="text-xl font-bold tracking-tight">tick3r</span>
+            <span className="text-xl font-bold tracking-tight">Tick3r</span>
           </div>
 
           <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
@@ -42,7 +42,7 @@ const Index = () => {
           /* Upload State */
           <div className="mx-auto max-w-2xl space-y-6">
             <div className="space-y-2 text-center">
-              <h1 className="text-2xl font-semibold">tick3r - Extract frames from any video</h1>
+              <h1 className="text-2xl font-semibold">Tick3r - Extract frames from any video</h1>
               <p className="text-muted-foreground">
                 Fast, free, and completely private. No uploads required.
               </p>

@@ -15,8 +15,8 @@ export default defineConfig(({ mode }) => ({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'pwa-192x192.png', 'pwa-512x512.png'],
       manifest: {
-        name: 'tick3r',
-        short_name: 'tick3r',
+        name: 'Tick3r',
+        short_name: 'Tick3r',
         description: 'Extract frames from videos - 100% client-side, no uploads',
         theme_color: '#3b82f6',
         background_color: '#ffffff',
