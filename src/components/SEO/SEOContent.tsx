@@ -25,14 +25,16 @@ export const SEOContent: React.FC = () => {
         </section>
       </div>
 
-      <div className="bg-surface-elevated rounded-xl p-2 m-auto border border-border">
-        <h2 className="text-2xl font-bold mb-6">How to Extract Frames from Video</h2>
-        <ol className="list-decimal list-inside space-y-4 text-muted-foreground  text-left">
-          <li><strong className="text-foreground">Upload your video:</strong> Drag and drop your file or click to select from your device. We support all major formats including MP4, MOV, WebM, and AVI.</li>
-          <li><strong className="text-foreground">Navigate to the perfect moment:</strong> Use our precise timeline slider or frame-by-frame controls to find the exact shot you need.</li>
-          <li><strong className="text-foreground">Capture and Save:</strong> Click the "Extract Frame" button to instantly save the image as a high-quality PNG or JPEG file.</li>
-        </ol>
-      </div>
+      <section className="mb-12">
+        <div className="bg-surface-elevated rounded-xl p-6 border border-border">
+          <h2 className="text-2xl font-bold mb-6">How to Extract Frames from Video</h2>
+          <ol className="list-decimal list-inside space-y-4 text-muted-foreground  text-left">
+            <li><strong className="text-foreground">Upload your video:</strong> Drag and drop your file or click to select from your device. We support all major formats including MP4, MOV, WebM, and AVI.</li>
+            <li><strong className="text-foreground">Navigate to the perfect moment:</strong> Use our precise timeline slider or frame-by-frame controls to find the exact shot you need.</li>
+            <li><strong className="text-foreground">Capture and Save:</strong> Click the "Extract Frame" button to instantly save the image as a high-quality PNG or JPEG file.</li>
+          </ol>
+        </div>
+      </section>
 
       <div className="mb-12">
         <h2 className="text-2xl font-bold mb-8">Perfect for Social Media & Content Creation</h2>
