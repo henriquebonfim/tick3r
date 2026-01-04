@@ -26,17 +26,17 @@ export default defineConfig(({ mode }) => ({
           {
             src: 'pwa-192x192.webp',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/webp',
           },
           {
             src: 'pwa-512x512.webp',
             sizes: '512x512',
-            type: 'image/png',
+            type: 'image/webp',
           },
           {
             src: 'pwa-512x512.webp',
             sizes: '512x512',
-            type: 'image/png',
+            type: 'image/webp',
             purpose: 'any maskable',
           },
         ],

@@ -35,12 +35,33 @@ jobs:
         run: |
           # Create a channel ID based on the PR number
           CHANNEL_ID="pr-${{ github.event.number }}"
-          # Use npx to run firebase-tools without global installation
-          npx firebase-tools hosting:channel:deploy "$CHANNEL_ID" --expires 1h --project tick3r
+          # Deploy and capture JSON output
+          OUTPUT=$(npx firebase-tools hosting:channel:deploy "$CHANNEL_ID" --expires 1h --project tick3r --json)
+          echo "$OUTPUT"
+
+          # Extract URL
+          URL=$(echo "$OUTPUT" | jq -r '.result.tick3r.url')
+
+          # Print URL to annotation and log
+          echo "::notice title=Preview URL::$URL"
+          echo "Final Deployment URL: $URL"
 
       - name: Deploy to Production
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
-          npx firebase-tools deploy --only hosting --project tick3r
+          OUTPUT=$(npx firebase-tools deploy --only hosting --project tick3r --json)
+          echo "$OUTPUT"
+
+          # Print URL to annotation and log
+          # Extract URL from JSON output
+          URL=$(echo "$OUTPUT" | jq -r '.result.hosting | .. | .url? | select(. != null) | select(startswith("https"))' | head -n 1)
+
+          # Fallback
+          if [ -z "$URL" ] || [ "$URL" = "null" ]; then
+            URL="https://tick3r.web.app"
+          fi
+
+          echo "::notice title=Production URL::$URL"
+          echo "Final Deployment URL: $URL"
