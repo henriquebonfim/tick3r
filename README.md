@@ -13,6 +13,8 @@ A modern, fast, and secure tool to extract frames from videos directly in your b
 - **Customization**: Adjust output format (e.g., JPEG) and quality levels to suit your needs.
 - **Modern Interface**: Built with a sleek, responsive design using Tailwind CSS and Radix UI.
 - **Video Player**: Integrated player to preview and seek through your video for precise frame selection.
+- **SEO Optimizations**: 100% scored.
+  <img width="741" height="948" alt="image" src="https://github.com/user-attachments/assets/35b2db1a-f4a6-48e8-b000-d11ff8653f6d" />
 
 ## Technologies Used
 
