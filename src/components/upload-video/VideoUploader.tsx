@@ -90,7 +90,7 @@ export function VideoUploader({ onVideoSelect }: VideoUploaderProps) {
         <p className="mt-1 text-sm text-muted-foreground">or click to browse</p>
       </div>
 
-      <p className="text-xs text-muted-foreground/70">
+      <p className="text-xs text-muted-foreground">
         All processing happens in your browser — nothing is uploaded
       </p>
     </div>

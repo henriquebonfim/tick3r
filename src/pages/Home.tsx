@@ -28,7 +28,7 @@ const Index = () => {
       <header className="border-b border-border bg-surface-elevated">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <button className="flex items-center gap-3 cursor-pointer bg-transparent border-none p-0" onClick={handleBack} title="Choose another video" type="button">
-            <img src="/pwa-192x192.png" alt="tick3r" className="h-10 w-10" />
+            <img src="/logo-48x48.png" alt="Tick3r logo icon" className="h-10 w-10" />
             <span className="text-xl font-bold tracking-tight">Tick3r</span>
           </button>
 

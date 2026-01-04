@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'pwa-192x192.png', 'pwa-512x512.png'],
+      includeAssets: ['favicon.ico', 'pwa-192x192.webp', 'pwa-512x512.webp'],
       manifest: {
         name: 'Tick3r',
         short_name: 'Tick3r',
@@ -24,19 +24,19 @@ export default defineConfig(({ mode }) => ({
         orientation: 'portrait',
         icons: [
           {
-            src: 'pwa-192x192.png',
+            src: 'pwa-192x192.webp',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/webp',
           },
           {
-            src: 'pwa-512x512.png',
+            src: 'pwa-512x512.webp',
             sizes: '512x512',
-            type: 'image/png',
+            type: 'image/webp',
           },
           {
-            src: 'pwa-512x512.png',
+            src: 'pwa-512x512.webp',
             sizes: '512x512',
-            type: 'image/png',
+            type: 'image/webp',
             purpose: 'any maskable',
           },
         ],
@@ -49,6 +49,17 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'ui-vendor': ['@radix-ui/react-dialog', '@radix-ui/react-label', '@radix-ui/react-progress', '@radix-ui/react-select', '@radix-ui/react-slider', '@radix-ui/react-slot', 'lucide-react', 'clsx', 'tailwind-merge'],
+          // 'zip-vendor': ['jszip'], // Optional: jszip is already in StandardEditor chunk due to lazy loading
+        },
+      },
     },
   },
 }));

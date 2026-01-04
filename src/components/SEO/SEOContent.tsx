@@ -49,30 +49,30 @@ export const SEOContent: React.FC = () => {
           </p>
 
           <div className="space-y-12">
-            <div className="flex gap-6 md:gap-10 items-start">
+            <div className="flex gap-6 md:gap-10 items-center">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xl border border-primary/20">1</div>
               <div>
-                <h4 className="font-bold text-xl text-foreground mb-2">Drag, Drop, and Load Instantly</h4>
+                <h3 className="font-bold text-xl text-foreground mb-2">Drag, Drop, and Load Instantly</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Simply drag your video file from your desktop directly into the browser window. Because we don't upload the file, it loads instantly—even if it's a massive 10GB movie file. We support a vast array of containers and codecs including MP4, MKV, AVI, MOV, WebM, and HEVC, ensuring compatibility with footage from iPhones, Androids, DSLRs, and Action Cameras.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-6 md:gap-10 items-start">
+            <div className="flex gap-6 md:gap-10 items-center">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xl border border-primary/20">2</div>
               <div>
-                <h4 className="font-bold text-xl text-foreground mb-2">Precision Frame-by-Frame Navigation</h4>
+                <h3 className="font-bold text-xl text-foreground mb-2">Precision Frame-by-Frame Navigation</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Finding the "perfect" frame is an art. A standard video player skips huge chunks of time. Tick3r gives you a professional timeline slider and dedicated frame-stepping controls. You can move forward or backward by typically 0.04 seconds (at 25fps), allowing you to catch split-second micro-expressions, lightning strikes, or the exact moment a ball hits the bat.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-6 md:gap-10 items-start">
+            <div className="flex gap-6 md:gap-10 items-center">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xl border border-primary/20">3</div>
               <div>
-                <h4 className="font-bold text-xl text-foreground mb-2">Export & Batch Processing</h4>
+                <h3 className="font-bold text-xl text-foreground mb-2">Export & Batch Processing</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Once you've isolated your target frame, a single click saves it to your device. But we go further: for users who need datasets or storyboards, our "Batch Extraction" mode allows you to automatically save a frame every second (or any custom interval). This is a game-changer for AI researchers training LORA models or video editors creating contact sheets.
                 </p>
