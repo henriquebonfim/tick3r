@@ -1,6 +1,7 @@
 import { SEOContent } from '@/components/SEO/SEOContent'; // Import SEOContent
 import { VideoUploader } from '@/components/upload-video/VideoUploader';
-import { Shield } from 'lucide-react';
+import { useOnlineStatus } from '@/lib/hooks/useOnlineStatus';
+import { Shield, Wifi, WifiOff } from 'lucide-react';
 import { Suspense, lazy, useCallback, useState } from 'react';
 
 const StandardEditor = lazy(() => import('@/components/editors/StandardEditor').then(module => ({ default: module.StandardEditor })));
@@ -8,6 +9,7 @@ const StandardEditor = lazy(() => import('@/components/editors/StandardEditor').
 const Index = () => {
   const [videoFile, setVideoFile] = useState<File | null>(null);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
+  const isOnline = useOnlineStatus();
 
   const handleVideoSelect = useCallback((file: File, url: string) => {
     setVideoFile(file);
@@ -32,9 +34,28 @@ const Index = () => {
             <span className="text-xl font-bold tracking-tight">Tick3r</span>
           </button>
 
-          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            <Shield className="h-3.5 w-3.5" />
-            <span>100% Client-side (No servers)</span>
+          <div className="flex items-center gap-4">
+            <div className={`flex items-center gap-1.5 text-xs font-medium px-2 py-1 rounded-full ${isOnline ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400'}`}>
+              {isOnline ? (
+                <>
+                  <Wifi className="h-3 w-3" />
+                  <span>Online</span>
+                  <Shield className="h-3.5 w-3.5" />
+                  <div className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <span>100% Private</span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <WifiOff className="h-3 w-3" />
+                  <span>Offline</span>
+                  <Shield className="h-3.5 w-3.5" />
+                  <div className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <span>100% Private</span>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </header>
