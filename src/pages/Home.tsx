@@ -1,7 +1,9 @@
-import { StandardEditor } from '@/components/editors/StandardEditor';
+import { SEOContent } from '@/components/SEO/SEOContent'; // Import SEOContent
 import { VideoUploader } from '@/components/upload-video/VideoUploader';
 import { Shield } from 'lucide-react';
-import { useCallback, useState } from 'react';
+import { Suspense, lazy, useCallback, useState } from 'react';
+
+const StandardEditor = lazy(() => import('@/components/editors/StandardEditor').then(module => ({ default: module.StandardEditor })));
 
 const Index = () => {
   const [videoFile, setVideoFile] = useState<File | null>(null);
@@ -40,22 +42,32 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8">
         {!videoUrl ? (
           /* Upload State */
-          <div className="mx-auto max-w-2xl space-y-6">
-            <div className="space-y-2 text-center">
-              <h1 className="text-2xl font-semibold">Tick3r - Extract frames from any video</h1>
-              <p className="text-muted-foreground">
-                Fast, free, and completely private. No uploads required.
-              </p>
+          <div className="mx-auto max-w-4xl space-y-12">
+            <div className="mx-auto max-w-2xl space-y-6">
+              <div className="space-y-2 text-center">
+                <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Tick3r - Extract frames from any video</h1>
+                <p className="text-lg text-muted-foreground">
+                  Fast, free, and completely private. No uploads required.
+                </p>
+              </div>
+
+              <VideoUploader onVideoSelect={handleVideoSelect} />
             </div>
 
-            <VideoUploader onVideoSelect={handleVideoSelect} />
+            <SEOContent /> {/* Add SEO rich content */}
           </div>
         ) : (
           /* Editor State */
-          <StandardEditor videoFile={videoFile} videoUrl={videoUrl} />
+          <Suspense fallback={
+            <div className="flex items-center justify-center min-h-[400px]">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            </div>
+          }>
+            <StandardEditor videoFile={videoFile} videoUrl={videoUrl} />
+          </Suspense>
         )}
       </main>
-    </div>
+    </div >
   );
 };
 
