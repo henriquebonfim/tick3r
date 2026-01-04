@@ -7,6 +7,7 @@ A modern, fast, and secure tool to extract frames from videos directly in your b
 ## Features
 
 - **100% Secure & Private**: Client-side processing means your videos never leave your device.
+- **Offline Capable**: Works completely without an internet connection after the first load.
 - **Flexible Extraction**: Capture the current frame instantly or extract a sequence of frames based on custom settings.
 - **Bulk Download**: Download all extracted frames as a ZIP archive or save them individually.
 - **Customization**: Adjust output format (e.g., JPEG) and quality levels to suit your needs.
@@ -19,8 +20,9 @@ A modern, fast, and secure tool to extract frames from videos directly in your b
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Components**: [Radix UI](https://www.radix-ui.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **Utilities**: `jszip`
-- **PWA**: Fully installable Progressive Web App
+- **Utilities**: `jszip`, `ffmpeg` (optional/future)
+- **PWA**: Fully installable Progressive Web App with offline support via Service Workers
+- **Hooks**: Custom hooks for online status detection (`useOnlineStatus`)
 
 ## Getting Started
 

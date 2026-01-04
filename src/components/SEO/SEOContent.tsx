@@ -151,6 +151,20 @@ export const SEOContent: React.FC = () => {
 
           <details className="group bg-surface-elevated rounded-xl border border-border overflow-hidden transition-all duration-200">
             <summary className="flex cursor-pointer items-center justify-between p-6 font-medium text-foreground hover:bg-surface/50 transition-colors">
+              <h3 className="text-lg font-bold">Can I use Tick3r offline?</h3>
+              <span className="shrink-0 rounded-full bg-primary/10 p-2 text-primary group-open:-rotate-180 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </span>
+            </summary>
+            <div className="px-6 pb-6 pt-2">
+              <p className="leading-relaxed text-muted-foreground">
+                Absolutely! Tick3r is built as a Progressive Web App (PWA). Once you load the page for the first time, it is cached on your device. You can then use it on airplanes, in remote locations, or anywhere with spotty internet. We even provide a visual "Offline" indicator so you know when you're disconnected—but don't worry, the app keeps working perfectly for all local video files.
+              </p>
+            </div>
+          </details>
+
+          <details className="group bg-surface-elevated rounded-xl border border-border overflow-hidden transition-all duration-200">
+            <summary className="flex cursor-pointer items-center justify-between p-6 font-medium text-foreground hover:bg-surface/50 transition-colors">
               <h3 className="text-lg font-bold">Which video formats and codecs are supported?</h3>
               <span className="shrink-0 rounded-full bg-primary/10 p-2 text-primary group-open:-rotate-180 transition-transform">
                 <svg xmlns="http://www.w3.org/2000/svg" className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
@@ -188,7 +202,7 @@ export const SEOContent: React.FC = () => {
 
       <footer className="mt-24 border-t border-border pt-12 text-center text-sm text-muted-foreground">
         <p className="mb-2 font-medium">Tick3r - The Professional's Choice for Private Video Frame Extraction</p>
-        <p>&copy; {new Date().getFullYear()} Tick3r. Built with Privacy and Performance in mind.</p>
+        <p>&copy; {new Date().getFullYear()} Tick3r</p>
       </footer>
     </article>
   );
