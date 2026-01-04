@@ -2,7 +2,8 @@
 
 A modern, fast, and secure tool to extract frames from videos directly in your browser. All processing is done client-side, ensuring your videos truly stay on your device.
 
-<img width="1161" height="901" alt="image" src="https://github.com/user-attachments/assets/2e1ca309-6908-4bb7-b3ad-95bbea24052a" />
+<img width="1142" height="969" alt="image" src="https://github.com/user-attachments/assets/4748e44b-cf4d-4c21-b1e3-2920c97c9e13" />
+
 
 ## Features
 
